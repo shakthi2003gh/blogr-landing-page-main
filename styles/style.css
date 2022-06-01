@@ -70,6 +70,10 @@ h3 {
   color: var(--color-secondary);
 }
 
+.features h2 {
+  margin-top: 3rem;
+}
+
 h3 {
   margin: 2rem 6rem;
 }
@@ -279,4 +283,9 @@ li span::after {
 
 .infrastructure section {
   transform: translateY(-85%);
+}
+
+/* >Feature section */
+.features {
+  margin: 5rem 0;
 }
