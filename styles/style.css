@@ -12,14 +12,19 @@ html {
   min-width: 375px;
 }
 
-main img {
-  width: 100%;
+ol,
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 /* > Color palette */
 :root {
   --color-heading: hsl(208, 49%, 24%);
-  --color-text-CTA: hsl(356, 100%, 66%);
+  --color-primary: hsl(356, 100%, 66%);
   --color-secondary: hsl(0, 0%, 100%);
   --color-text-footer: hsl(240, 2%, 79%);
 
@@ -36,5 +41,190 @@ main img {
 body {
   font-size: 1.6rem;
   font-family: "Overpass", sans-serif;
-  /* font-family: "Ubuntu", sans-serif; */
+}
+
+.button {
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+h1 {
+  margin: 2rem 2rem;
+}
+
+p {
+  font: 2.2rem;
+  margin: 0 3rem 2rem;
+  opacity: 0.8;
+}
+
+/* >image */
+main img {
+  width: 100%;
+}
+
+.logo {
+  width: 85px;
+  height: 32px;
+}
+
+.hamburger-menu {
+  width: 30px;
+  height: 20px;
+}
+
+/* >button */
+.hero .button-section {
+  margin: 5rem 0;
+}
+
+nav .button-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.9rem;
+  gap: 1rem;
+}
+
+nav .button-section::before {
+  position: absolute;
+  top: -1.8rem;
+  content: "";
+  width: 85%;
+  height: 0;
+  border: 1px solid hsla(240, 3%, 79%, 0.391);
+}
+
+.button {
+  text-decoration: none;
+  padding: 1.3rem 2rem;
+  border-radius: 100px;
+  margin: 0 0.8rem;
+  color: var(--color-secondary);
+}
+
+.button--bg,
+.button--border:hover {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+nav .button {
+  color: var(--color-heading);
+  width: 40%;
+}
+
+nav .button--bg {
+  color: var(--color-secondary);
+  background-image: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+}
+
+.button--bg:hover {
+  color: var(--color-secondary);
+  background-color: hsla(0, 0%, 100%, 0.209);
+}
+
+.button--border {
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+
+/* >header */
+header {
+  height: clamp(550px, 85vh, 700px);
+  padding: 5rem 2rem;
+
+  background: url(/images/bg-pattern-intro-mobile.svg), var(--gradient-CTA);
+  background-repeat: no-repeat;
+  background-size: 350vw, auto;
+  background-position: -21.2em -19em, 0;
+
+  border-bottom-left-radius: 100px;
+}
+
+header .container:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container:last-child {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+nav,
+ol {
+  display: none;
+}
+
+.open-menu nav {
+  position: absolute;
+  top: 12rem;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: var(--color-heading);
+  box-shadow: 0px 18px 49px -5px rgb(0 0 0 / 43%);
+  border-radius: 5px;
+  background-color: var(--color-secondary);
+  z-index: 2;
+}
+
+.open-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+li span {
+  position: relative;
+}
+
+li span::after {
+  position: absolute;
+  content: url(/images/icon-arrow-dark.svg);
+
+  top: -0.2rem;
+  right: -2.5rem;
+  width: 20px;
+}
+
+.open span {
+  color: hsla(208, 49%, 24%, 0.612);
+}
+
+.open span::after {
+  transform: rotate(180deg);
+  top: 0.1rem;
+}
+
+.open ol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 2.5rem;
+  padding: 2.5rem;
+
+  border-radius: 5px;
+  color: hsla(208, 49%, 24%, 0.612);
+  background: hsla(240, 3%, 79%, 0.391);
 }
