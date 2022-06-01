@@ -40,6 +40,7 @@ li {
 /* > Typography */
 body {
   font-size: 1.6rem;
+  text-align: center;
   font-family: "Overpass", sans-serif;
 }
 
@@ -63,6 +64,12 @@ h3 {
   color: var(--color-heading);
 }
 
+.infrastructure h2 {
+  font-size: 3.5rem;
+  line-height: 2.3ch;
+  color: var(--color-secondary);
+}
+
 h3 {
   margin: 2rem 6rem;
 }
@@ -74,13 +81,14 @@ p {
   opacity: 0.8;
 }
 
-.design p {
+.design p,
+.infrastructure p {
   margin: 0 4rem 2rem;
 }
 
 /* >image */
 main img {
-  width: 100%;
+  width: clamp(200px, 100%, 500px);
 }
 
 .logo {
@@ -246,10 +254,29 @@ li span::after {
 
 /* >Design section */
 .design {
-  text-align: center;
   margin: 10rem 0;
 }
 
 .design section {
   margin: 4rem 0;
+}
+
+/* >Infrastructure section */
+.infrastructure {
+  margin-top: 28rem;
+  height: clamp(600px, 85vh, 900px);
+  color: var(--color-secondary);
+  border-radius: 0 100px;
+  background: url(/images/bg-pattern-circles.svg), var(--gradient-bg);
+  background-repeat: no-repeat;
+  background-size: 160%, 100%;
+  background-position: -11rem -25rem, 0;
+}
+
+.infrastructure img {
+  transform: translateY(-50%);
+}
+
+.infrastructure section {
+  transform: translateY(-85%);
 }
