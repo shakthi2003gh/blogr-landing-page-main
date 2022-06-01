@@ -1,1 +1,40 @@
 @import url(/styles/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 375px;
+}
+
+main img {
+  width: 100%;
+}
+
+/* > Color palette */
+:root {
+  --color-heading: hsl(208, 49%, 24%);
+  --color-text-CTA: hsl(356, 100%, 66%);
+  --color-secondary: hsl(0, 0%, 100%);
+  --color-text-footer: hsl(240, 2%, 79%);
+
+  --color-hover-CTA-bg: hsl(355, 100%, 74%);
+  --color-footer-bg: hsl(240, 10%, 16%);
+  --color-body: hsl(207, 13%, 34%);
+
+  /* Gradients */
+  --gradient-CTA: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  --gradient-bg: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+}
+
+/* > Typography */
+body {
+  font-size: 1.6rem;
+  font-family: "Overpass", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
+}
