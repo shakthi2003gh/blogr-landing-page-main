@@ -90,6 +90,17 @@ p {
   margin: 0 4rem 2rem;
 }
 
+@media screen and (min-width: 750px) {
+  .design h3,
+  .infrastructure h2 {
+    margin-left: 4rem;
+  }
+
+  p {
+    max-width: 500px;
+  }
+}
+
 /* >image */
 main img {
   width: clamp(200px, 100%, 500px);
@@ -385,10 +396,6 @@ nav .open ol {
     transform: translateX(25%);
   }
 
-  .design h3 {
-    margin-left: 4rem;
-  }
-
   .design section {
     text-align: left;
   }
@@ -420,6 +427,30 @@ nav .open ol {
 
 .infrastructure section {
   transform: translateY(-85%);
+}
+
+@media screen and (min-width: 750px) {
+  .infrastructure {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    height: clamp(380px, 40vh, 600px);
+
+    text-align: left;
+
+    background-size: 68%, 100%;
+    background-position: -16rem -45rem, 0;
+  }
+
+  .infrastructure img {
+    height: max-content;
+    transform: translateY(-10%);
+  }
+
+  .infrastructure section {
+    transform: translateY(0);
+    align-self: center;
+  }
 }
 
 /* >Feature section */
