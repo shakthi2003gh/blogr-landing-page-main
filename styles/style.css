@@ -367,6 +367,10 @@ nav .open ol {
   ol li:hover {
     color: var(--color-heading);
   }
+
+  footer ol li:hover {
+    color: var(--color-secondary);
+  }
 }
 
 /* >Design section */
