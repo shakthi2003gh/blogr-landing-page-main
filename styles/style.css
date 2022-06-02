@@ -368,6 +368,40 @@ nav .open ol {
   margin: 4rem 0;
 }
 
+@media screen and (min-width: 750px) {
+  .design {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "heading heading" "content1 image" "content2 image";
+  }
+
+  .design h2 {
+    grid-area: heading;
+  }
+
+  .design img {
+    grid-area: image;
+    align-self: center;
+    transform: translateX(25%);
+  }
+
+  .design h3 {
+    margin-left: 4rem;
+  }
+
+  .design section {
+    text-align: left;
+  }
+
+  .design section:first-child {
+    grid-area: content1;
+  }
+
+  .design section:last-child {
+    grid-area: content2;
+  }
+}
+
 /* >Infrastructure section */
 .infrastructure {
   margin-top: 28rem;
