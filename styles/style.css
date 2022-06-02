@@ -115,7 +115,7 @@ nav .button-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   gap: 1rem;
 }
 
@@ -134,6 +134,7 @@ nav .button-section::before {
   border-radius: 100px;
   margin: 0 0.8rem;
   color: var(--color-secondary);
+  white-space: nowrap;
 }
 
 .button--bg,
@@ -166,6 +167,34 @@ nav .button--bg {
   border: 1px solid var(--color-secondary);
 }
 
+@media screen and (min-width: 750px) {
+  nav .button-section {
+    flex-direction: row;
+    font-size: 1.6rem;
+  }
+
+  nav .button-section::before {
+    display: none;
+  }
+
+  nav .button {
+    color: var(--color-secondary);
+    width: auto;
+  }
+
+  nav .button--bg {
+    padding: 1.1rem 3.4rem;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+  }
+}
+
+/* >container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* >header */
 header {
   height: clamp(550px, 85vh, 700px);
@@ -183,6 +212,7 @@ header .container:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8rem;
 }
 
 header .container:last-child {
@@ -195,6 +225,7 @@ header .container:last-child {
 nav,
 nav ol {
   display: none;
+  width: 90%;
 }
 
 .open-menu nav {
@@ -220,6 +251,11 @@ header.open-menu ul {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+li {
+  position: relative;
+  cursor: pointer;
 }
 
 li span {
@@ -256,9 +292,76 @@ nav .open ol {
   background: hsla(240, 3%, 79%, 0.391);
 }
 
+@media screen and (min-width: 750px) {
+  header {
+    background: url(/images/bg-pattern-intro-desktop.svg),
+      linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-repeat: no-repeat;
+    background-size: 200vw 180vw, auto;
+    background-position: -25vw -150vh, 0;
+  }
+
+  header .container:first-child {
+    display: flexbox;
+    gap: 6rem;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  nav,
+  nav ul,
+  .open-menu nav,
+  .open-menu nav ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    padding: 0;
+    font-weight: 300;
+
+    font-size: 1.6rem;
+    box-shadow: none;
+    color: var(--color-secondary);
+    background: transparent;
+  }
+
+  .open span {
+    color: var(--color-secondary);
+  }
+
+  li span::after {
+    content: url(/images/icon-arrow-light.svg);
+    top: 0;
+    right: -2.8rem;
+  }
+
+  li span:hover {
+    text-decoration: underline;
+  }
+
+  nav .open ol {
+    position: absolute;
+    top: 4rem;
+    right: -70%;
+
+    margin: 0;
+    text-align: left;
+    box-shadow: 0px 11px 27px -3px rgb(0 0 0 / 44%);
+    background-color: var(--color-secondary);
+  }
+
+  ol li:hover {
+    color: var(--color-heading);
+  }
+}
+
 /* >Design section */
 .design {
-  margin: 10rem 0;
+  margin: 10rem auto;
 }
 
 .design section {
@@ -287,7 +390,7 @@ nav .open ol {
 
 /* >Feature section */
 .features {
-  margin: 5rem 0;
+  margin: 5rem auto;
 }
 
 /* >Footer */
@@ -309,7 +412,7 @@ footer ul li {
 
 footer ol {
   margin: 2.5rem 0;
-  color: rgba(255, 255, 255, 0.618);
+  color: var(--color-text-footer);
 }
 
 footer ol li {
